@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: actuator-bug
+  name: actuator-bug
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: actuator-bug
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: actuator-bug
+    spec:
+      containers:
+      - image: example/actuator-bug
+        name: actuator-bug
+        resources: {}
+status: {}

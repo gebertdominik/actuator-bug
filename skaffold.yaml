@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta18
+kind: Config
+metadata:
+  name: actuator-bug
+build:
+  artifacts:
+  - image: example/actuator-bug
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - deployment.yaml
